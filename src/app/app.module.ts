@@ -1,6 +1,8 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
+import { SafeUrlPipe } from './safe-url.pipe';
 import { AngularFireModule } from '@angular/fire/compat';
 import { AngularFireAuthModule } from '@angular/fire/compat/auth';
 import { AngularFirestoreModule } from '@angular/fire/compat/firestore';
@@ -15,6 +17,8 @@ import { CreateUserComponent } from './create-user/create-user.component';
 import { ListUserComponent } from './list-user/list-user.component';
 import { EditUserComponent } from './edit-user/edit-user.component';
 import { AppRoutingModule } from './app-routing.module';
+import { ShowUserQrComponent } from './show-user-qr/show-user-qr.component';
+import { UserInfoComponent } from './user-info/user-info.component';
 
 @NgModule({
   declarations: [
@@ -22,6 +26,9 @@ import { AppRoutingModule } from './app-routing.module';
     CreateUserComponent,
     ListUserComponent,
     EditUserComponent,
+    ShowUserQrComponent,
+    SafeUrlPipe,
+    UserInfoComponent,
   ],
   imports: [
     BrowserModule,
@@ -31,6 +38,7 @@ import { AppRoutingModule } from './app-routing.module';
     AppRoutingModule,
     FormsModule,
     ReactiveFormsModule,
+    HttpClientModule,
   ],
   providers: [UserService],
   bootstrap: [AppComponent],

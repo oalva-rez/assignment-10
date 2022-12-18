@@ -1,0 +1,12 @@
+<h1 class="text-center">{{ user.name }}'s QR Code</h1>
+<p class="muted text-center">
+  Send this to potential employers for access to students profile.
+</p>
+<img [src]="getQrUrl() | safeUrl" alt="QR Code" class="mx-auto d-block" />
+
+<a
+  class="btn btn-primary btn-lg d-block"
+  [href]="getQrUrl() | safeUrl"
+  download=""
+  >Download QR</a
+>

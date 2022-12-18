@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { UserService } from '../user.service';
+import { QrCodeService } from '../qr-code.service';
 import { User } from '../user.model';
 
 @Component({
@@ -10,7 +11,10 @@ import { User } from '../user.model';
 export class ListUserComponent implements OnInit {
   Users?: User[];
 
-  constructor(private userService: UserService) {}
+  constructor(
+    private userService: UserService,
+    public qrCodeService: QrCodeService
+  ) {}
 
   ngOnInit() {
     this.userService.getUserList().subscribe((res) => {
@@ -22,6 +26,8 @@ export class ListUserComponent implements OnInit {
       });
     });
   }
-
+  createCode = (user: any) => {
+    this.qrCodeService.getQrCode(user);
+  };
   removeUser = (user: any) => this.userService.deleteUser(user);
 }

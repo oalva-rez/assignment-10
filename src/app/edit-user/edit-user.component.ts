@@ -22,6 +22,8 @@ export class EditUserComponent implements OnInit {
       name: [''],
       email: [''],
       contact: [''],
+      portfolioLink: [''],
+      myNotes: [''],
     });
   }
 
@@ -34,6 +36,8 @@ export class EditUserComponent implements OnInit {
         name: [this.userRef.name],
         email: [this.userRef.email],
         contact: [this.userRef.contact],
+        portfolioLink: [this.userRef.portfolioLink],
+        myNotes: [this.userRef.myNotes],
       });
     });
   }

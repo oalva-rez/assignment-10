@@ -1,3 +1,4 @@
+<h1 class="text-center">All Students</h1>
 <table class="table">
   <thead>
     <tr>
@@ -15,11 +16,32 @@
       <td>{{ user.email }}</td>
       <td>{{ user.contact }}</td>
       <td>
-        <span (click)="removeUser(user)" class="text-danger">Delete</span>
-        &nbsp;
-        <span routerLink="/update-user/{{ user.id }}" class="text-primary"
-          >Edit</span
+        <button
+          routerLink="/update-user/{{ user.id }}"
+          class="btn btn-primary btn-sm"
         >
+          Edit
+        </button>
+        &nbsp;
+        <button
+          routerLink="/user-info/{{ user.id }}"
+          class="btn btn-primary btn-sm"
+        >
+          More Info
+        </button>
+        &nbsp;
+        <button
+          routerLink="/show-user-qr/{{ user.id }}"
+          (click)="createCode(user)"
+          class="btn btn-primary btn-sm"
+        >
+          Get QR Code
+        </button>
+        &nbsp;
+        <button (click)="removeUser(user)" class="btn btn-danger btn-sm">
+          Delete
+        </button>
+        &nbsp;
       </td>
     </tr>
   </tbody>

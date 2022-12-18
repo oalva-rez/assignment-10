@@ -44,6 +44,8 @@ export class UserService {
       name: user.name,
       email: user.email,
       contact: user.contact,
+      portfolioLink: user.portfolioLink,
+      myNotes: user.myNotes,
     });
   }
 }

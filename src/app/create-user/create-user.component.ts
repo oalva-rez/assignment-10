@@ -20,6 +20,8 @@ export class CreateUserComponent implements OnInit {
       name: [''],
       email: [''],
       contact: [''],
+      portfolioLink: [''],
+      myNotes: [''],
     });
   }
 

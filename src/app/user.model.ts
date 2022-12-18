@@ -3,4 +3,6 @@ export class User {
   name?: string;
   email?: string;
   contact?: string;
+  portfolioLink?: string;
+  myNotes?: string;
 }

@@ -1,4 +1,5 @@
 <form [formGroup]="userForm" (ngSubmit)="onSubmit()" novalidate>
+  <h2>Create Student Entry</h2>
   <div class="mb-3">
     <label>Name</label>
     <input type="text" formControlName="name" class="form-control" required />
@@ -17,6 +18,26 @@
       class="form-control"
       required
     />
+  </div>
+  <div class="mb-3">
+    <label>Portfolio Link</label>
+    <input
+      type="text"
+      formControlName="portfolioLink"
+      class="form-control"
+      required
+    />
+  </div>
+  <div class="mb-3">
+    <label>Reference Letter</label>
+    <textarea
+      type="text"
+      formControlName="myNotes"
+      class="form-control"
+      required
+      rows="5"
+    >
+    </textarea>
   </div>
 
   <div class="mb-3">
